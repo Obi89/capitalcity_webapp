@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Capital City Game</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="question">
+<style>.question{background-image: url(assets/img/globe.jpeg);}</style>
+    <div class="questiontext">
+    <h1>Guess the capital city!</h1>
+    <img src="{{ capital.image }}" width="420px">
+    <h2>What is the capital city of {{ capital.country }}?</h2>
+
+    <form method="post" action="/result">
+    <p>
+        <input type="text" class="form-control" id="inputPassword2" placeholder="Enter your answer here!" name="guess">
+        <input type="hidden" value="{{ capital.country }}" name="country">
+        <button class="btn btn-outline-light">Submit</button>
+    </p>
+</form>
+</div>
+</div>
+
+</body>
+</html>

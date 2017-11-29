@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="result">
+<style>.result{background-image: url(assets/img/globe.jpeg);}</style>
+    <div class="resultcontent">
+
+{% if result %}
+    <img src="/assets/img/correct.jpg" height="300px">
+    <p style="color: rgb(0, 230, 0); font-weight: bold">Yesssss! Your answer is correct. {{ item.capital }} is the capital of {{ item.country }}!</p>
+        <p><a class="citylink" href="{{ item.link }}">Learn more about {{ item.capital }}!</a></p>
+{% else %}
+    <img src="/assets/img/wrong.png" height="300px">
+    <p style="color: red; font-weight: bold">Sorry, but your answer is wrong... The capital of {{ item.country }} is {{ item.capital }}!</p>
+        <p style="color: rgb(255, 255, 255);"><a class="citylink" href="{{ item.link }}">Learn more about {{ item.capital }}!</a></p>
+{% endif %}
+
+<a href="/"><button type="button" class="btn btn-outline-light">Retry!</button></a>
+    </div>
+</div>
+
+</body>
+</html>
