@@ -13,11 +13,11 @@
     <div class="resultcontent">
 
 {% if result %}
-    <img src="/assets/img/correct.jpg" height="300px">
+    <img src="/assets/img/correct.jpg" height="250px">
     <p style="color: rgb(0, 230, 0); font-weight: bold">Yesssss! Your answer is correct. {{ item.capital }} is the capital of {{ item.country }}!</p>
         <p><a class="citylink" href="{{ item.link }}">Learn more about {{ item.capital }}!</a></p>
 {% else %}
-    <img src="/assets/img/wrong.png" height="300px">
+    <img src="/assets/img/wrong.png" height="250px">
     <p style="color: red; font-weight: bold">Sorry, but your answer is wrong... The capital of {{ item.country }} is {{ item.capital }}!</p>
         <p style="color: rgb(255, 255, 255);"><a class="citylink" href="{{ item.link }}">Learn more about {{ item.capital }}!</a></p>
 {% endif %}
